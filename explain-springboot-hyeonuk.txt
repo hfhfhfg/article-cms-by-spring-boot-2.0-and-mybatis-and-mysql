@@ -1,0 +1,26 @@
+*Spring Boot , 마이바티스 , Mysql 이용해서 간단한 게시판 구현
+
+-STS 4.0 툴을 이용해서 스프링 부트 2.0 프로젝트 생성
+- GITHUB 리포지터리 생성
+- 프로젝트 폴더와 GIT HUB 리포지터리의 MASTER 브랜치와 연결
+- .gitignore에 버전관리 안할 파일들 추가
+- 첫 커밋 하기전에 기본세팅부터 하기
+	-의존성 추가
+	-aplication.yml 세팅
+	-log4jdbc.log4j2.properties, logback.xml 복사
+		-이걸 하는 이유는 실행되는 SQL을 예쁘게 로그로 보여주기 위해
+			-그걸 위한 기본적인 세팅입니다.
+	-DB 세팅
+- 켜지는지 확인하기
+- 컨트롤러 하나 만들어서 확인
+- commit (처음에 push 안될땐 head:master로 명시적으로 지정해주기)
+- 서버로 push
+	-기존의 크리덴셜 삭제(여기선 하지 않았음 명시적인 방법으로 해결하였음)
+	-올림
+- 서버에서 확인
+- 리스트 JSP 추가[완료]
+- ArticleSerivce, ArticleServiceImple, ArticleDto 생성 및 세팅 ,getList() 함수를 구현 (처음엔 가데이터로)
+	-DB에서 가져온 데이터가 아닌 가데이터로 결과를 먼저 확인한다.
+	-중간확인을 위함임.
+- 컨트롤러가 받은 list를 jsp에 넘겨서 보여주기
+- 이제 Dao를 통해서 진데이터를 처리
