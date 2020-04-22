@@ -29,4 +29,9 @@ public class ArticleController {
 		//request.setAttribute 와 똑같은 표현이다.
 		return "article/list";
 	}
+	
+	@RequestMapping("/article/add")
+	public String showAdd() {
+		return "article/add";
+	}
 }
