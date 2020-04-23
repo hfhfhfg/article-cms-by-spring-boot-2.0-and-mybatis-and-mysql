@@ -26,3 +26,5 @@
 - 이제 Dao를 통해서 진데이터를 처리
 - ArticleDao 생성 및 적용
 - ArticleDaoImpl을 마이바티스가 대신 작업하도록( 참고로 마이바티스는 진짜 DB에서 가져온다.)
+- Add.jsp 작동하게 하기
+- doAdd 작업하기

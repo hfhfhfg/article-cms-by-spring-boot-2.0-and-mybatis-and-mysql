@@ -5,4 +5,8 @@
 	<select id="getList" parameterType="map" resultType="Article">
 		SELECT * FROM article ORDER BY id DESC
 	</select>
+	
+	<insert id="add" parameterType="map">
+		INSERT INTO article(regDate,title,body) VALUES(now(),#{title},#{body})
+	</insert>
 </mapper>
