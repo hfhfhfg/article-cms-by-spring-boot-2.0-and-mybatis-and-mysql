@@ -21,6 +21,7 @@ public class ArticleController {
 	@Autowired
 	ArticleService articleService;
 	
+	
 	@RequestMapping("/article/list")
 	public String showList(Model aModel ) {
 		
@@ -45,5 +46,6 @@ public class ArticleController {
 		long newId = articleService.add(param);
 		
 		return newId + "번 게시물이 추가 되었습니다.";
+		
 	}
 }

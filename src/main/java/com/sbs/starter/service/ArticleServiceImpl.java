@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.sbs.starter.dao.ArticleDao;
 import com.sbs.starter.dto.Article;
+import com.sbs.starter.util.CUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,10 +31,13 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		articleDao.add(param);
 		
-		BigInteger newIntId = (BigInteger) param.get("id");
 		
-		long newId = newIntId.longValue();
+//		이하 int를 long으로 바꾸는 방법이 너무 난잡하기 때문에. CUtil을 만들어서 새로 지정하였다.
+//		BigInteger newIntId = (BigInteger) param.get("id");
+//		
+//		long newId = newIntId.longValue();
 		
+		long newId = CUtil.getAsLong(param.get("id"));
 		
 		return  newId;
 		

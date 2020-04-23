@@ -28,3 +28,5 @@
 - ArticleDaoImpl을 마이바티스가 대신 작업하도록( 참고로 마이바티스는 진짜 DB에서 가져온다.)
 - Add.jsp 작동하게 하기
 - doAdd 작업하기
+- doAdd를 하는 와중에 auto_increment 에 의해 생긴 주기 키 값을 알아내야 한다.
+- CUTIL 도입 (왜냐? 너무 불편하니까(Bigint를 long으로 바꾸는게 너무 길다.)

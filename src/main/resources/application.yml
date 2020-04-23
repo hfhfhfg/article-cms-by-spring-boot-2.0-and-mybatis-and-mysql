@@ -2,6 +2,9 @@ mybatis:
   type-aliases-package: com.sbs.starter.dto
 server:
   port: 8083
+  tomcat:
+    uri-encoding: UTF-8
+    
 spring:
   mvc:
     view:
