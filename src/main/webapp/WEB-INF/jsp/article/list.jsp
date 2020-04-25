@@ -45,5 +45,6 @@
 		제목 : ${article.title }</section>
 		<hr>
 	</c:forEach>
+	<a href="./add">게시물 추가</a>
 </body>
 </html>
