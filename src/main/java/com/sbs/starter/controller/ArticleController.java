@@ -27,10 +27,15 @@ public class ArticleController {
 		
 		List<Article> list = articleService.getList();
 		
+		int totalCount = articleService.getTotalCount();
+		
 		//log.info("list : " + list);
 		
 		aModel.addAttribute("List",list);
 		//request.setAttribute 와 똑같은 표현이다.
+		
+		aModel.addAttribute("totalCount",totalCount);
+		
 		return "article/list";
 	}
 	
