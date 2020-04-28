@@ -14,7 +14,7 @@
 <title>안녕</title>
 </head>
 <body>
-	<h1>게시물 리스트 입니다.</h1>
+	<%-- <h1>게시물 리스트 입니다.</h1>
 	<h2>v1</h2>
 	<%
 		for (int i = 0; i < list.size(); i++) {
@@ -32,13 +32,13 @@
 
 	<%
 		}
-	%>
+	%> --%>
 	
 	<h1>게시물 리스트 입니다.</h1>
 	
 	<h2>전체 게시물의 수 : ${totalCount }</h2>
 
-	<h2>v2</h2>
+	<h2>hide v1: ( request.get version )<hr><br>v2 : ( el version )  </h2>
 	<!--v2 는  el으로 설정하였다.  el의 장점은 getAttribute시 형변환등을 고려하지 않아도 되는 장점이 있다.  --> 
 	<c:forEach items="${List }" var="article">
 		<section>번호 : ${article.id}, 
