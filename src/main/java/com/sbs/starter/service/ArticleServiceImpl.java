@@ -57,4 +57,10 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		return articleDao.getOne(id);
 	}
+
+
+	@Override
+	public void delete(long id) {
+		articleDao.delete(id);
+	}
 }

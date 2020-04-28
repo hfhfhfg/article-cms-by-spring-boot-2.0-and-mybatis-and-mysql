@@ -7,16 +7,20 @@
 	</select>
 	
 	<select id ="getOne" parameterType="long" resultType="Article">
-		SELECT * FROM article WHERE ID = #{id}
+		SELECT * FROM article WHERE id = #{id}
 	</select>
 	
 	<select id="getTotalCount" parameterType="map" resultType="int">
-		SELECT COUNT(*) FROM article ;
+		SELECT COUNT(*) FROM article
 	</select>
 	
 	<insert id="add" parameterType="map" useGeneratedKeys="true" keyProperty="id" >
 		INSERT INTO article(regDate,title,body) VALUES(now(),#{title},#{body})
 	</insert>
+	
+	<delete id ="delete" parameterType="long">
+		DELETE FROM article WHERE id = ${id}
+	</delete>
 	
 	
 </mapper>
