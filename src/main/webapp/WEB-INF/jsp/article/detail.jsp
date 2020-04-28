@@ -4,19 +4,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="com.sbs.starter.dto.Article"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<c:set var="pageName" value="게시물 상세페이지" />
 
-<link rel="stylesheet" href="/resource/common.css">
-
-<title>커뮤니티 사이트 - 게시물 상세페이지</title>
-</head>
-<body>
+<%@ include file="../part/head.jspf" %>
 	
 	
-	<h1>게시물 상세페이지.</h1>
+	
 	
 	<section class="con">번호  : ${article.id }<br> 제목 : ${article.title } <br> 내용 : ${article.body }</section>
 	<div class="btns con">
@@ -25,5 +18,4 @@
 	<a href="./modify?id= ${article.id }">게시물 수정</a>
 	<a onclick="if(confirm('삭제 하시겠습니까?') == false)return false;" href="./doDelete?id= ${article.id }">게시물 삭제</a>
 	</div>
-</body>
-</html>
+<%@ include file="../part/foot.jspf" %>

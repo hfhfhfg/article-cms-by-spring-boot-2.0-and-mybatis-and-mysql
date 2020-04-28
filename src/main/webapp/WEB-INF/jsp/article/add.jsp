@@ -2,15 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<c:set var="pageName" value="게시물  추가" />
 
-
-<link rel="stylesheet" href="/resource/common.css">
-
-<title>커뮤니티 사이트 - 게시물 작성</title>
+<%@ include file="../part/head.jspf" %>
 
 <script>
 function submitAddForm(form) {
@@ -37,9 +31,7 @@ function submitAddForm(form) {
 </script>
 
 
-</head>
-<body>
-	<h1 class="con">게시물 작성.</h1>
+	
 	
 	<form class="con common-form" action="./doAdd" method="POST" onsubmit="submitAddForm(this); return false;">
 		<div>
@@ -68,5 +60,4 @@ function submitAddForm(form) {
 	
 	</form>
 
-</body>
-</html>
+<%@ include file="../part/foot.jspf" %>

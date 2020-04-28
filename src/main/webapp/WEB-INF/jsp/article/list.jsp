@@ -2,21 +2,17 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="com.sbs.starter.dto.Article"%>
+
+<c:set var="pageName" value="게시물 리스트" />
+
+<%@ include file="../part/head.jspf" %>
+<%-- <%@ page import="com.sbs.starter.dto.Article"%>
 
 
 
 <%
 	List<Article> list = (List<Article>) request.getAttribute("List");
-%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="/resource/common.css">
-<title>안녕</title>
-</head>
-<body>
+%> --%>
 	<%-- <h1>게시물 리스트 입니다.</h1>
 	<h2>v1</h2>
 	<%
@@ -37,7 +33,7 @@
 		}
 	%> --%>
 	
-	<h1 class="con">게시물 리스트 입니다.</h1>
+	
 	
 	<h2 class="con">전체 게시물의 수 : ${totalCount }</h2>
 
@@ -57,5 +53,4 @@
 	<div class="btns con">
 	<a href="./add">게시물 추가</a>
 	</div>
-</body>
-</html>
+<%@ include file="../part/foot.jspf" %>

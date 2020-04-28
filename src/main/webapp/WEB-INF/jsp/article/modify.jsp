@@ -4,13 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="com.sbs.starter.dto.Article"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<c:set var="pageName" value="게시물  수정" />
 
-<link rel="stylesheet" href="/resource/common.css">
-
+<%@ include file="../part/head.jspf" %>
 <script>
 	submitModifyForm(form){
 		form.title.value = form.title.value.trim();
@@ -33,12 +29,10 @@
 	}
 
 </script>
-<title>커뮤니티 사이트 - 게시물 수정페이지</title>
-</head>
-<body>
+
 	
 	
-	<h1 class="con">게시물 수정</h1>
+	
 	
 	
 	
@@ -74,5 +68,4 @@
 	
 	
 	
-</body>
-</html>
+<%@ include file="../part/foot.jspf" %>
