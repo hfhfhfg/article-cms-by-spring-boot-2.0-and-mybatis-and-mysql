@@ -17,7 +17,7 @@ function submitAddForm(form) {
 	form.title.value = form.title.value.trim();
 	
 	if(form.title.value.length == 0){
-		alert("내용을 입력해주세요.");
+		alert("제목을 입력해주세요.");
 		form.title.focus();
 		
 		return false;
