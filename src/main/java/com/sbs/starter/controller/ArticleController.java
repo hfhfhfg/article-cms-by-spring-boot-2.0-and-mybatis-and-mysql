@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sbs.starter.dto.Article;
 import com.sbs.starter.service.ArticleService;
+import com.sbs.starter.util.CUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -103,5 +104,25 @@ public class ArticleController {
 		
 		return "article/modify";
 	}
+	
+	@RequestMapping("/article/doModify")
+	@ResponseBody
+	public String doModify(Model model,@RequestParam Map<String , Object> param) {
+		
+		long newId =  CUtil.getAsLong(param.get("id"));
+		
+		articleService.modify(param);
+		
+		StringBuilder sb = new StringBuilder();
+		
+		String msg = newId +" 번 게시물이 수정 되었습니다.";
+		
+		sb.insert(0,"<script>");
+		sb.append("alert('" + msg + "');");
+		sb.append("location.replace('./detail?id="+ newId +"');");
+		sb.append("</script>");
+		return sb.toString();
+	}
+	
 	
 }
