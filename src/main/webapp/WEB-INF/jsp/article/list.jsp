@@ -4,6 +4,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="com.sbs.starter.dto.Article"%>
 
+
+
 <%
 	List<Article> list = (List<Article>) request.getAttribute("List");
 %>
@@ -11,6 +13,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/resource/common.css">
 <title>안녕</title>
 </head>
 <body>

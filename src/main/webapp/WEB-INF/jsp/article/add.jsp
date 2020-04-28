@@ -6,6 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="/resource/common.css">
+
 <title>커뮤니티 사이트 - 게시물 작성</title>
 
 <script>
@@ -32,33 +36,6 @@ function submitAddForm(form) {
 }
 </script>
 
-<style>
-	.con{
-	width:1000px;
-	margin: 0 auto;
-	}
-	
-	.common-form > div > * {
-	 	float:left;
-	}
-	
-	.common-form > div :: {
-		content:"";
-		display:block;
-		clear:both;
-	}
-	
-	.common-form > div > span{
-		width:50px;
-	}
-	.common-form > div > div {
-		width:calc(100% - 50px);
-	}
-	.common-form > div > div > input[type="text"] , .common-form > div > div > textarea {
-		width:90%;
-	}
-	
-</style>
 
 </head>
 <body>
