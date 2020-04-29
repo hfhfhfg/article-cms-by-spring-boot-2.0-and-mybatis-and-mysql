@@ -54,5 +54,8 @@
 		- member/join.jsp 만들기
 - 회원가입폼에서 받은데이터 처리하는 부분구현
 	- DB 데이터 생성
+	- Member 테이블에 대응하는 MemberDto 생성'
+	- 로그인 Id 중복체크 구현
+	- test 해보기
 
  
