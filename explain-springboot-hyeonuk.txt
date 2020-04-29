@@ -1,3 +1,5 @@
+1부
+
 *Spring Boot , 마이바티스 , Mysql 이용해서 간단한 게시판 구현
 
 -STS 4.0 툴을 이용해서 스프링 부트 2.0 프로젝트 생성
@@ -42,3 +44,13 @@
 - common.css 폰트작업 ( url 을 이용한 폰트 사용방법)
 - 게시물 수정뷰 작업 ( add 폼을 이용해서 hidden특성으로 id를 넘기는 것과 초기 value를 placeholder외에 별도로 지정하였다 )
 - 게시물 수정처리 작업 ( CUtil을 다시 사용하였다. )
+- hit column추가 ( 상세페이지를 호출 할 떄 마다 hit = hit+1 을 이용 하였음
+
+2부
+
+- 기존 데이터 모두 삭제후 다시 진행
+- 회원가입 만들기
+	- /member/join 페이지 만들기
+		- member/join.jsp 만들기
+
+ 
