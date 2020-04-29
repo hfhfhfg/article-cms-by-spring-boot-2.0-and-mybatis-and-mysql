@@ -27,4 +27,7 @@ public interface ArticleDao {
 
 
 	public void modify(Map<String, Object> param);
+
+
+	public void hitUp(long id);
 }

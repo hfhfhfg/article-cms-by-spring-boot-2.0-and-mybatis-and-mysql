@@ -43,7 +43,7 @@
 	<div class="con"> 
 	<c:forEach items="${List }" var="article">
 		<section>
-		<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title } </a>
+		<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title } , 조회수 : ${article.hit } </a>
 		</section>
 		<hr>
 	</c:forEach>

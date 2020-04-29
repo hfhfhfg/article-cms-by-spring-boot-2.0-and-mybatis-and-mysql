@@ -28,6 +28,8 @@ public class ArticleController {
 		
 		Article article = articleService.getOne(id);
 		
+		articleService.hitUp(id);
+		
 		model.addAttribute("article",article);
 		
 		return "article/detail";

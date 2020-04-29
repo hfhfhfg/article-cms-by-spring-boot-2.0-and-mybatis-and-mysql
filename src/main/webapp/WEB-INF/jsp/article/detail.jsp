@@ -11,7 +11,7 @@
 	
 	
 	
-	<section class="con">번호  : ${article.id }<br> 제목 : ${article.title } <br> 내용 : ${article.body }</section>
+	<section class="con">번호  : ${article.id }<br> 제목 : ${article.title } <br> 내용 : ${article.body } <br> 조회수 : ${article.hit }</section>
 	<div class="btns con">
 	<a href="./list">게시물 리스트</a>
 	<a href="./add">게시물 추가</a>
