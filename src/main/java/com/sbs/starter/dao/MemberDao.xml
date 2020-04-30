@@ -6,6 +6,14 @@
 		SELECT Count(*) FROM member WHERE loginId = #{loginId}
 	</select>
 	
+	<select id="getOne" parameterType="Long" resultType="Member">
+		SELECT * FROM member WHERE id = #{id}
+	</select>
+	
+	<select id="getMatchedOne" parameterType="String" resultType="Member">
+		SELECT * FROM member WHERE loginId = #{loginId} AND loginPw = #{loginPw}
+	</select>
+	
 	<insert id="join" parameterType="map" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO member(regDate,loginId,loginPw) values(now(),#{loginId},#{loginPw})
 	</insert>
