@@ -6,5 +6,9 @@
 		SELECT Count(*) FROM member WHERE loginId = #{loginId}
 	</select>
 	
+	<insert id="join" parameterType="map" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO member(regDate,loginId,loginPw) values(now(),#{loginId},#{loginPw})
+	</insert>
+	
 	
 </mapper>
