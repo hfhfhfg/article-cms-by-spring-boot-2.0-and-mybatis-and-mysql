@@ -20,17 +20,21 @@ public class HomeController {
 	MemberService memberService;
 	
 	@RequestMapping("/home/main")
-	public String showMain(HttpSession session, Model model) {
+	public String showMain(/*HttpSession session,*/ Model model) {
 		
-		long loginedMemberId = 0 ;
-		
-		if (session.getAttribute("loginedMemberId") != null) {
-			loginedMemberId = (long)session.getAttribute("loginedMemberId");
-		}
-		
-		Member loginedMember = memberService.getOne(loginedMemberId);
-		
-		model.addAttribute("loginedMember" ,loginedMember);
+		/* //해당 로그인 회원 번호로 회원정보 전체를 불러온다. //이걸 거의 모든 액션에서 하게 된다 이를 방지해야한다. Member
+		/*
+		 * long loginedMemberId = 0 ;
+		 * 
+		 * 
+		 * //로그인 한 상태인지 체크하는 부분 if (session.getAttribute("loginedMemberId") != null) {
+		 * loginedMemberId = (long)session.getAttribute("loginedMemberId"); }
+		 * 
+		 * 
+		 * loginedMember = memberService.getOne(loginedMemberId);
+		 * 
+		 * model.addAttribute("loginedMember" ,loginedMember);
+		 */
 		
 		
 		return "home/main";
