@@ -17,19 +17,20 @@ public class BeforeActionInterceptor implements HandlerInterceptor {
 	@Autowired
 	MemberService memberService;
 	
-	public boolean preHandler(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception{
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) 
+			throws Exception{
 		
 		
 		boolean isLogined = false;
-		long loginedMemberId = 0 ;
+		long loginedMemberId = 0;
 		Member loginedMember = null;
 		
 		HttpSession session = request.getSession();
 		
 		if( session.getAttribute("loginedMemberId") != null) {
 			
-			loginedMemberId = (long) session.getAttribute("loginedMemberId");
 			isLogined = true;
+			loginedMemberId = (long) session.getAttribute("loginedMemberId");
 			loginedMember = memberService.getOne(loginedMemberId);
 					
 		}
@@ -39,7 +40,7 @@ public class BeforeActionInterceptor implements HandlerInterceptor {
 		request.setAttribute("loginedMember", loginedMember);
 		
 		
-		return HandlerInterceptor.super.preHandle(request, response,handler);
+		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 
 }
