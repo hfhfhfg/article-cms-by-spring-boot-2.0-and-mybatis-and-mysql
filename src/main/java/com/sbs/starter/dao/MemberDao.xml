@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sbs.starter.dao.MemberDao">
+	<select id="getLoginIdDupCount" parameterType="String" resultType="int">
+		SELECT Count(*) FROM member WHERE loginId = #{loginId}
+	</select>
+	
+	<select id="getOne" parameterType="Long" resultType="Member">
+		SELECT * FROM member WHERE id = #{id}
+	</select>
+	
+	<select id="getMatchedOne" parameterType="String" resultType="Member">
+		SELECT * FROM member WHERE loginId = #{loginId} AND loginPw = #{loginPw}
+	</select>
+	
+	<insert id="join" parameterType="map" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO member(regDate,loginId,loginPw) values(now(),#{loginId},#{loginPw})
+	</insert>
+	
+	
+</mapper>

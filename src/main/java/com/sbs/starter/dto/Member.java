@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Article {
+public class Member {
 	private long id;
 	private String regDate;
-	private String title;
-	private String body;
-	private long hit;
+	private String loginId;
+	private String loginPw;
 }
